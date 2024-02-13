@@ -1,0 +1,10 @@
+integrator k4m4
+ensemble nve
+init restart
+timestep 0.1
+steps 500
+stats 0.5
+playback 0.5
+shake 1e-9
+measure MaxErrC -Tin -Ttr
+finish

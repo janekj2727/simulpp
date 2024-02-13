@@ -1,0 +1,16 @@
+CS01 – Harmonic oscillator
+units K
+
+molecules 1
+harmonic_oscilator
+nummols 1
+atoms 2
+X   1.0 0 1
+X   1.0 0 1
+constraints 0
+bonds 1
+harm 1 2 1.0 2.0
+finish
+vdw  1
+X   X  lj  0.0 0.5
+close

@@ -1,0 +1,7 @@
+#ifndef VERSIONHEADER
+#define VERSIONHEADER
+
+#define VERSION "@CMAKE_PROJECT_VERSION@"
+#define DATE "@DATE@"
+
+#endif

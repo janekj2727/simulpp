@@ -1,0 +1,15 @@
+CS02 – dumb-bell
+units K
+
+molecules 1
+dumb-bell
+nummols 1
+atoms 2
+X   1.0 0.0 1
+X   1.0 0.0 1
+constraints 1
+1 2 2.0
+bonds 0 
+finish
+vdw  0
+close

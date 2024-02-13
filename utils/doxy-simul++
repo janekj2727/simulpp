@@ -1,0 +1,21 @@
+#!/bin/bash
+
+PWD=$(pwd)
+cd $SIMULHOME
+
+fileslist=$(find -type f -name "*.md")
+
+for file in $fileslist ; do 
+    sed -i 's|\$|\\f\$|g' $file
+done
+
+doxygen $SIMULHOME/documentation/doxygen/Doxyfile
+
+for file in $fileslist ; do 
+    sed -i 's|\\f\$|\$|g' $file
+done
+
+cp $SIMULHOME/documentation/doxygen/mydoxygen.css $SIMULHOME/documentation/doxygen/html/doxygen.css
+cp $SIMULHOME/documentation/doxygen/mynavtree.css $SIMULHOME/documentation/doxygen/html/navtree.css
+
+cd $PWD

@@ -1,0 +1,17 @@
+CS04 – Nitrogen in PBC
+units K
+
+molecules 1
+diatomic
+nummols 512
+atoms 2
+N   14.006 0.0 1
+N   14.006 0.0 1
+constraints 1
+1 2 1.09
+bonds 0
+# harm 1 2 1.0 2.0
+finish
+vdw  1
+N   N  lj  99.8 3.667
+close

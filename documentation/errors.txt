@@ -1,0 +1,72 @@
+1   Error while reading .control file (no such file) (opened by fstream.open)
+2   Simulation stepsize not given in .control file (or invalid - zero or negative)
+3   Invalid 'nfold' value in .control file
+4   Negative noStep ('steps' in .control file) value
+5   Invalid LJcutoff ('ljcutoff' in .control file).
+6   Negative measurement frequency ('stats' in .control file).
+7   Cannot open .field file (in SimulatedSystem::ReadFieldFile())
+8   Cannot open .mol file (in SimulatedSystem::ReadFieldFile())
+9   Wrong number of molecular types ('molecules' in .field file) or not given.
+10  Nummols not given in right place in .field file.
+11  Wrong number of molecules of one type ('nummols') in .field file.
+12  Number of atoms ('atoms') not given in right place in .field file.
+13  Wrong number of atoms in one molecule ('atoms') in .field file.
+14  Wrong 'repetiton' number in atom line in 'atoms' in .field file (or greater then predicted by 'atoms').
+15  Negative or zero atom mass in .field file.
+16  Wrong number of constraints in .field file.
+17  Wrong length of constrained bond in .field file.
+18  Wrong atom idetifiers in constrained bond definition in .field file.
+19  Wrong number of bonds in .field file.
+20  Wrong length of bond in .field file.
+21  Wrong atom idetifiers in bond definition in .field file.
+22  Wrong strength of bond in .field file.
+23  Reading of molecular type in .field file incomplete, 'finish' not reached.
+24  Directive 'vdw' not present or not in right place in .field file.
+25  Wrong number of LJ terms ('vdw' directive) in .field file.
+26  End of .field file ended before all vdw terms read.
+27  Wrong vdw specification (nonexisting atom name) in field file.
+28  Wrong epsilon value given in .field file. 
+29  Wrong sigma value given in .field file. 
+30  End of .field file not reached (directive 'close' has not been encountered).
+31  Error during closing .field file
+32  Error during closing .mol file
+33  Cannot open .config file
+34  Number of atoms in .config (times total proliferation from nfold directive) mismatch with .field file
+35  End of .config file reached sooner than expected.
+36  Wrong name of atom in .config file.
+37  Cannot close .config file.
+38  Cannot open .plb file.
+39  Cannot open .cpa file.
+40  Unknown ensemble in simulation.Initialize() (should not happen).
+41  Cannot open .history file.
+42  Wrong frequency of .history writing
+43  Wrong keytraj to history option
+44  Cannot open .prt file
+45  Energy = NaN – simulation crashed
+46  Premature end or corrupted .field file
+47  Premature end or corrupted .config file
+48  Thermostat requested without tau.T, or barostat without tau.P, or ntvinit tau.rho
+49  Charged system in periodic boundary conditions cannot be simulated
+50  Unexpected type of bond in .field file
+51  Wrong value of equilibrium angle of bond in .field file
+52  Invalid atom numbers in angle description in .field file
+53  Negative strength in angle description in .field file
+54  Unknown type of angle potential in .field file
+55  Wrong (too large) number of angles in .field file
+56  Wrong type of vdw interactions in .field file
+57  Not enough parameters in 'elstat' directive in .control file
+58  Wrong type of elstat interactions in .control file
+59  Wrong number (too large?) of dihedrals in .field file
+60  Wrong delta (angle difference) in dihedrals in .field file
+61  Invalid atom numbers in dihedral description in .field file
+62  Wrong strength parameter (A) in dihedral description in .field file
+63  Wrong multiplicity (m) in dihedral description in .field file
+64  Unknown type of dihedral potential in .field file
+65  Atoms in angle not connected by bonds (neither flexible, nor constrained)
+66  Atoms in dihedral not connected by bonds (neither flexible, nor constrained)
+67  Wrong distance within a molecule (molecule divided into independent parts)
+68  Wrong directive scale14 in .control file
+69  Trying to use Ewald summation in free boundary conditions (impossible, use cutoff electrostatics instead)
+70  Wrong parameter for Ewald summation (left it empty for default value)
+71  Trying to write forces to .for file, but .for file not initialized (should never happen)
+72  Cannot open .for file

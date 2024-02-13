@@ -1,0 +1,40 @@
+nitrogen molecules cs07
+
+integration verlet
+
+# System state information
+temperature      300.00
+pressure            0.49346163
+
+# Ensemble specification
+ensemble nvt hoover 0.2
+
+# Startup options
+restart noscale
+
+# Simulation controls
+timestep         0.001
+steps             40000
+equilibration        0
+print               10
+stack               10
+stats               10
+trajectory	0 10 1
+
+# RDF/Z-density controls
+
+# Force cut-offs and controls
+cutoff           10.0
+rvdw cutoff      10.0
+
+# Electrostatics controls
+no elec 
+
+# Quaternion and SHAKE controls
+shake tolerance  1.0E-9
+
+# Job running time and closedown time
+job time         700000.0
+close time       100.000
+
+finish 

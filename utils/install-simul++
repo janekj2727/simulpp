@@ -1,0 +1,65 @@
+#!/bin/bash
+
+# Path settings
+echo "simul++ will be install to the current folder"
+echo "if you want to change this, please enter the desired full path, else press Enter"
+read SIMULHOME
+
+if [[ $SIMULHOME == '' ]]; then
+    SIMULHOME=$(pwd)
+else
+    echo "To enable other scripts in 'utils' folder, define this path as $SIMULHOME in your .bashrc or equivalent."
+fi
+
+# Installation script for simul++
+cd $SIMULHOME
+# Check existence of build folders
+if [ ! -d "build" ]; then
+    mkdir build
+fi
+
+# check for the existence of mymath_script.cpp
+# if not exists, create one
+if [ ! -f "mymath/src/mymath_main.cpp" ]; then
+    touch ./mymath/src/mymath_main.cpp
+fi
+
+# pass options from commandline to CMake
+# if $1='-c' then clear cache first
+if [ "$1" == "-c" ]; then
+    echo "Cleaning CMake cache..."
+    cd build
+    rm CMakeCache.txt
+    cd ../build-debug
+    rm CMakeCache.txt
+    cd ..
+    exit
+else
+    opts="$@"
+    echo "Options for CMake: $opts"
+    cd build
+    cmake -DMYDEBUG=OFF $opts ..
+    make -j4
+fi
+
+cd ../bin
+if [ ! -L install-simul++ ]; then
+    ln -s ../utils/install-simul++ install-simul++
+fi
+if [ ! -L doxy-simul++ ]; then
+    ln -s ../utils/doxy-simul++ doxy-simul++
+fi
+if [ ! -L mymath.sh ]; then
+    ln -s ../utils/mymath.sh mymath.sh
+fi
+if [ ! -L eng_slope.sh ]; then
+    ln -s ../utils/eng_slope.sh eng_slope.sh
+fi
+if [ ! -L plot_difference.sh ]; then
+    ln -s ../utils/plot_difference.sh plot_difference.sh
+fi
+if [ ! -L plot.py ]; then
+    ln -s ../utils/plot.py plot.py
+fi
+
+cd ..

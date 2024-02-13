@@ -1,0 +1,20 @@
+# integrator – possible values: verlet, k3m2e, k4m2e, k4m4, k5m4e,...
+integrator k5m5
+# ensemble – nve makes sense for this CS
+ensemble nve
+# init – restart needed for the velocities not to be chosen randomly...
+init restart
+# timestep – can be modified in case of order testing
+timestep 0.1
+# temperature – irrelevant when nve and init restart
+temperature 100
+# number of steps
+steps 2000
+# frequency of measurement
+stats 0.1
+playback 0.1
+# cutoff irrelevant for this CS
+ljcutoff 7.5
+# uncomment when history should be stored...
+# history 0.001 1
+finish

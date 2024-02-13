@@ -1,0 +1,12 @@
+CS03 – Argon in PBC
+units K
+
+molecules 1
+nitrogen_atom
+nummols 64
+atoms 1
+Ar   48.046 0.0 1
+finish
+vdw  1
+Ar   Ar  lj  119.56 3.4
+close

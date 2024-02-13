@@ -1,0 +1,13 @@
+integrator verlet
+ensemble npt nose 0.2 2.0
+init restart
+timestep 0.001
+temperature 300
+pressure 101325
+steps 10000
+stats 0.01
+playback 0.01
+ljcutoff 10.0
+shake 1e-9
+measure MaxErrC PVVC Xi dXidt Lambda dLambdadt Eextra
+finish

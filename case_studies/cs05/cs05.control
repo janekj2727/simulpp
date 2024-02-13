@@ -1,0 +1,12 @@
+integrator k3m2e
+ensemble nve
+init restart
+timestep 0.002
+temperature 300
+steps 10000
+stats 0.01
+playback 0.05
+ljcutoff 15.0
+shake 1e-9
+measure MaxErrC
+finish

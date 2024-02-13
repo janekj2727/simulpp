@@ -1,0 +1,28 @@
+pokus14 for constr
+units K
+
+molecules 2
+diatomic
+nummols 256
+atoms 2
+N   14.006 0.0 1
+N   14.006 0.0 1
+constraints 1
+1 2 1.09
+bonds 0
+# harm 1 2 1.0 2.0
+finish
+argon_atom
+nummols 256
+atoms 1
+Ar   14.006 0.0 1
+constraints 0
+# 1 2 1.09
+bonds 0
+# harm 1 2 1.0 2.0
+finish
+vdw  3
+N   N  lj  99.8 3.667
+N   Ar lj  109.2 3.5335
+Ar  Ar lj  119.5 3.4
+close
