@@ -1,0 +1,24 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: simul++
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Jiří
+    family-names: Janek
+    email: janekj2727@gmail.com
+    affiliation: UCT Prague
+    orcid: 'https://orcid.org/0000-0002-3615-2052'
+repository-code: 'https://github.com/janekj2727/simulpp'
+abstract: >-
+  Simple but extensible package for molecular dynamics
+  simulations written in C++.
+keywords:
+  - molecular dynamics
+  - numerical integration
+  - C++
+license: GPL-3.0-or-later
